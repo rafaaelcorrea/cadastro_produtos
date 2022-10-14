@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap'); /* LINK DA URL QUE IMPORTARÁ A FONTE DO GOOGLE. */
+@import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap');
+:root { /* :root = É UM ESCOPO DE UMA VARIÁVEL GLOBAL */
+
+    --primary-color: rgb(13, 106, 163); /* ESSA COR  É A PADRÃO DE FUNDO  */
+    --primary-color-dark:rgb(6, 52, 82);  /* ESSA COR SERÁ A NOVA QUE APARECERÁ QUANDO PARAR O MOUSE DO BOTÃO. */
+} 
+
+* { /*  * = É UM SELETOR DE TODAS AS TAGS*/
+
+    box-sizing: border-box;
+    outline: 0;      
+}
+
+body {
+
+    margin: 0;
+    padding: 0;
+    background-color:  var(--primary-color) ;
+    font-family: 'Open Sans' , sans-serif;  
+    font-size: 1.3 em;
+    line-height: 1.5;
+    
+}
+
+.container {
+
+    max-width: 640px;
+    min-width: 50%;
+    margin: 20px auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 5.5px;
+    
+
+}
+
+form  input ,  form label,  form button { /* CONFIGURANDO/ESTILIZANDO OS INPUTS, LABELS E O BOTÃO QUE ESTÃO DENTRO DO FORM. */
+
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    border-radius: 2.5px;
+
+}
+
+form input {
+
+    font-size: 18px;
+    height: 50px;
+    width: 400px;
+    padding: 0 20px;
+    
+}
+
+form input:focus{ /*  FOCUS = INDICA EM QUAL INPUT A PESSOA ESTA USANDO NO MOMENTO */
+
+    outline: 1px solid  var(--primary-color); /* COR DA BORDA DO INPUT */
+
+}
+
+form button {
+
+    border: none;
+    background: var(--primary-color);
+    color: #fff;
+    font-size :12px ; 
+    font-weight: 700;
+    height: 50px;
+    cursor: pointer;
+    width: 30%;
+    border-radius: 5.5px;
+   
+
+}
+
+.button_reset{
+
+    background: rgba(175, 33, 33, 0.962);
+}
+
+.button_reset:hover{
+
+     background: rgba(90, 19, 19, 0.962);
+}
+
+form button:hover { /* HOVER = SERÁ O EFEITO QUE IRÁ APARECERÁ QUANDO O MOUSE FICAR EM CIMA DO BOTÃO.*/
+
+background: var(--primary-color-dark);
+
+}
+
+tbody{
+
+cursor: pointer;
+
+}
+
+.painel{
+    
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.buttons_container {
+
+    display: flex;
+    gap: 10px;
+}
+
+.buttons_container_02{
+
+    display: flex;
+    gap: 10px;
+}
+
+swal-button{
+    background-color: var(--primary-color-dark);
+}
+
+.bi {
+
+    font-size: 20px;
+}
+.bi-shop-window{
+
+    font-size: 30px;
+}
