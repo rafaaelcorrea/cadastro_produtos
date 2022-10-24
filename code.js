@@ -63,11 +63,10 @@ function produtoAcima5k () {
         
         } else {
 
-        const prodCincoMaisMilFilter = arrayProdutos.filter( objProp => { let filterCincoMil;
-            return filterCincoMil = objProp.inputValor ? objProp.inputValor > 5000 : delete objProp.inputValor; 
-        }).map( objProp => { return ` ${objProp.inputNome} -  R$${objProp.inputValor}` });
+      
             
-        const prodCincoMaisMilFilter2 = arrayProdutos.filter(objProp => objProp.inputValor > 5000);
+        const prodCincoMaisMilFilter = arrayProdutos.filter(objProp => objProp.inputValor > 5000)
+            .map(objProp => ` ${objProp.inputNome} -  R$${objProp.inputValor}`);
             
             
         // Criando e manipulando uma tabela HTML com JS:
@@ -86,14 +85,14 @@ function produtoAcima5k () {
         row_1.appendChild(heading_1);
         thead.appendChild(row_1);
             
-        console.log(prodCincoMaisMilFilter2);
+        console.log(prodCincoMaisMilFilter);
             
         //  For que torna dinâmica a criação de linhas das tabela, que será de acordo com o tamanho de dados do vetor de produtos:
-        for (let i = 0 ; i < prodCincoMaisMilFilter2.length ; i++  ) {
+        for (let i = 0 ; i < prodCincoMaisMilFilter.length ; i++  ) {
 
         let row_2 = document.createElement('tr');
         let row_2_data_1 = document.createElement('td');
-        row_2_data_1.innerHTML = prodCincoMaisMilFilter2[i].inputValor;
+        row_2_data_1.innerHTML = prodCincoMaisMilFilter[i];
     
         row_2.appendChild(row_2_data_1);
         tbody.appendChild(row_2);
