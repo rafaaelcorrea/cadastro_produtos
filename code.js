@@ -85,7 +85,9 @@ function produtoAcima5k () {
 
         row_1.appendChild(heading_1);
         thead.appendChild(row_1);
-        
+            
+        console.log(prodCincoMaisMilFilter2);
+            
         //  For que torna dinâmica a criação de linhas das tabela, que será de acordo com o tamanho de dados do vetor de produtos:
         for (let i = 0 ; i < prodCincoMaisMilFilter2.length ; i++  ) {
 
